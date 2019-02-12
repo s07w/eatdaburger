@@ -1,5 +1,8 @@
 # Eat da Burger, an app using Handlebars Templating
 
+[Link to the app](https://desolate-escarpment-95268.herokuapp.com/)
+
+
 ## What the App Does
 
 ![Image of App](https://i.imgur.com/qnvJ9tc.png)
