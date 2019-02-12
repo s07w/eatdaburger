@@ -1,6 +1,6 @@
-const connection = require("./connection.js");
+var connection = require("./connection.js");
 
-const orm = {
+var orm = {
     selectAll: function(tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result){
@@ -10,7 +10,7 @@ const orm = {
     },
 
     insertOne: function(tableInput, burger_name, cb) {
-        var queryString = "INSERT INTO" + tableInput + "(burger_name, devoured)" + "VALUES ('" + burger_name + "', 0);"
+        var queryString = "INSERT INTO " + tableInput + "(burger_name, devoured)" + "VALUES ('" + burger_name + "', 0);"
         console.log(queryString);
 
         connection.query(queryString, function(err, result){
@@ -20,7 +20,7 @@ const orm = {
     },
 
     update: function(table, condition, cb) {
-        var queryString = "UPDATE" + table + " SET devoured = 1 WHERE " + condition + ";";
+        var queryString = "UPDATE " + table + " SET devoured = 1 WHERE " + condition + ";";
 
         console.log(queryString);
         connection.query(queryString, function(err, result){
